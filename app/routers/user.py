@@ -6,7 +6,8 @@ from ..utils import hash_password
 from sqlalchemy.exc import IntegrityError
 
 router = APIRouter(
-    prefix='/users'
+    prefix='/users',
+    tags=['Users']
 )
 
 @router.post("/",status_code=201,response_model=schemas.UserReturn)
